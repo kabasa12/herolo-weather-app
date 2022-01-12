@@ -39,8 +39,13 @@ export const HomePage = () => {
     let weatherBackground = `require('../assets/images/rain.jpg')`;
     console.log(weatherBackground)
     return (
-        < >
+        <HeaderWrapper>
             <WeatherComp data={data} image={weatherBackground} />
-        </>
+            <WeatherComp data={data} image={weatherBackground} />
+            <WeatherComp data={data} image={weatherBackground} />
+            <WeatherComp data={data} image={weatherBackground} />
+            <WeatherComp data={data} image={weatherBackground} />
+            <WeatherComp data={data} image={weatherBackground} />
+        </HeaderWrapper>
     )
 }

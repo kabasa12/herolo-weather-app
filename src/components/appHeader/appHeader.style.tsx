@@ -12,6 +12,7 @@ align-items: center;
 
 & h1{
     flex:2;
+    color:#fff;
 }
 & .activeLink{
     margin-left:10px;
