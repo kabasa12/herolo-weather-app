@@ -1,16 +1,15 @@
 import styled from 'styled-components';
 import rain from '../../assets/images/rain.jpg'
 
-export const HeaderWrapper = styled.article`
+export const HeaderWrapper = styled.article<any>`
     width: 100%;
     height: 92vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: ${`url(${require('../../assets/images/rain.jpg')})`};
+    background-image: ${p => `url(${p.image})`};
     display: grid;
     grid-template-columns:auto auto auto auto auto;
-    /* grid-template-rows:50% 30%; */
     grid-gap: 10px;
     padding:10px;
     & div:first-child{
