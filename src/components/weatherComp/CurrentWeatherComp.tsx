@@ -5,7 +5,7 @@ import { InputComp } from '../inputs/InputComp'
 import { InputSearchWrap, MainCardFavWrap, MainCardTempWrap, MainCardWeatherDesc, MainCardWrap, WeatherWrapper } from './weatherComp.style'
 import { FavoriteIcon } from '../buttons/FavoriteIcon'
 
-export const CurrentWeatherComp = ({ data }: any) => {
+export const CurrentWeatherComp = ({ data }: any | undefined) => {
     const [temp, setTemp] = useState(0);
     const [favFill, setFavFill] = useState(false)
 
@@ -18,6 +18,7 @@ export const CurrentWeatherComp = ({ data }: any) => {
     }
 
 
+    if (!data) return (<div></div>)
     return (
         <WeatherWrapper current={true}>
             <InputSearchWrap>

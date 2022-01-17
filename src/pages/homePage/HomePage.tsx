@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Loader } from '../../components/loader/Loader';
 import { getWeatherImage } from '../../components/utills/utils';
 import { CurrentWeatherComp } from '../../components/weatherComp/CurrentWeatherComp';
 import { WeatherComp } from '../../components/weatherComp/WeatherComp';
@@ -176,7 +177,7 @@ const data = [
         "Link": "http://www.accuweather.com/en/il/tel-aviv/215854/daily-weather-forecast/215854?day=5&unit=c&lang=en-us"
     }
 ]
-interface WeatherInterface {
+export interface WeatherInterface {
     Date: string;
     EpochDate: number;
     Temperature: {
@@ -217,7 +218,11 @@ export const HomePage = () => {
 
     useEffect(() => {
         getData();
-        setBackgroundImg(getWeatherImage(data[0].Day.Icon));
+        //if (weatherData.length) {
+        //alert('ddddd' + getWeatherImage(weatherData[0]))
+
+        //}
+
     }, [])
 
     const getData = async () => {
@@ -225,9 +230,10 @@ export const HomePage = () => {
         if (cityKey) {
             let weatherInfo = await getWeatherInfo(cityKey);
             if (weatherInfo) {
-                console.log(weatherInfo.DailyForecasts)
+                // console.log(weatherInfo.DailyForecasts)
                 dispatch(addWeather(weatherInfo.DailyForecasts))
-                //console.log('weatherData', weatherData)
+                alert(getWeatherImage(weatherData[0]))
+                setBackgroundImg(getWeatherImage(weatherData[0]));
             } else {
                 console.log('weather info not found')
             }
@@ -235,6 +241,8 @@ export const HomePage = () => {
             console.log('city not found')
         }
     }
+
+    if (!weatherData.length) return <Loader />
     return (
         <HeaderWrapper image={backgroundImg}>
             <CurrentWeatherComp data={weatherData[0]} />

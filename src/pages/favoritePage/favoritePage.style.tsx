@@ -5,8 +5,9 @@ export const FavoriteWrapper = styled.div`
     width:100%;
     height:92vh;
     overflow-Y:scroll;
-    justify-content:space-evenly;
-    grid-template-columns:auto auto auto auto;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns:repeat(auto-fill, minmax(250px ,1fr));
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -15,8 +16,7 @@ export const FavoriteWrapper = styled.div`
 export const FavoriteCardWrap = styled.div`
     justify-content:center;
     text-align:center;
-    height:150px;
-    display:grid;
+
 `
 export const FavoriteCity = styled.div`
     align-items:flex-end;

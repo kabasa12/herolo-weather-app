@@ -8,8 +8,9 @@ export const WeatherWrapper = styled.div<any>`
     background:${p => p.current ? 'transparent' : 'rgba(0,0,0,0.3)'};
     color:#fff;
     display:block;
-    min-height:80px;
-    min-Width:200px;
+    height:250px;
+    gap: 10px;
+    width:250px;
 `
 export const BigDiv = styled.div`
     height:75%;

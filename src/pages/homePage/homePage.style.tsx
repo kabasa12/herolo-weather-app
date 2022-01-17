@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import rain from '../../assets/images/rain.jpg'
 
-export const HeaderWrapper = styled.article<any>`
+export const HeaderWrapper = styled.div<any>`
     width: 100%;
     height: 92vh;
     background-size: cover;

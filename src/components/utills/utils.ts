@@ -21,46 +21,93 @@ export const padNum = (num: number) => {
     }
 }
 
-export const getWeatherImage = (weatherIcon:any) => {
-    let sunArr = [1, 2, 30, 33];
-    let sunAndCloudsArr = [3, 4, 5, 6, 20, 21, 34];
-    let cloudsArr = [7, 8, 19, 32, 35, 36, 38, 43];
-    let fogArr = [11, 37];
-    let rainArr = [12, 16, 18, 25, 29, 39, 40];
-    let sunAndRainArr = [13, 14, 17];
-    let stormArr = [15, 26, 41, 42];
-    let snowArr = [22, 24, 31, 44];
-    let sunAndSnowArr = [23]
-    let selectedImage;
-    switch (true) {
-        case sunArr.includes(weatherIcon):
-            selectedImage = (require('../../assets/images/hot.jpg'));
-            break;
-        case sunAndCloudsArr.includes(weatherIcon):
-            selectedImage = (require('../../assets/images/sunAndClouds.jpg'));
-            break;
-        case cloudsArr.includes(weatherIcon):
-            selectedImage = (require('../../assets/images/clouds.jpg'));
-            break;
-        case fogArr.includes(weatherIcon):
-            selectedImage = (require('../../assets/images/fog.jpg'));
-            break;
-        case rainArr.includes(weatherIcon):
-            selectedImage = (require('../../assets/images/rain.jpg'));
-            break;
-        case sunAndRainArr.includes(weatherIcon):
-            selectedImage = (require('../../assets/images/sunAndRain.jpg'));
-            break;
-        case stormArr.includes(weatherIcon):
-            selectedImage = (require('../../assets/images/stormDay.jpg'));
-            break;
-        case snowArr.includes(weatherIcon):
-            selectedImage = (require('../../assets/images/snow.jpg'));
-            break;
-        case sunAndSnowArr.includes(weatherIcon):
-            selectedImage = (require('../../assets/images/sunAndSnow.jpg'));
-            break;
-    }
+export const getWeatherImage = (weatherIcon: any) => {
+    let imageArr = ['../../assets/images/hot.jpg',
+        '../../assets/images/hot.jpg',
+        '../../assets/images/sunAndClouds.jpg',
+        '../../assets/images/sunAndClouds.jpg',
+        '../../assets/images/sunAndClouds.jpg',
+        '../../assets/images/sunAndClouds.jpg',
+        '../../assets/images/clouds.jpg',
+        '../../assets/images/clouds.jpg',
+        '../../assets/images/sunAndClouds.jpg',
+        '../../assets/images/sunAndClouds.jpg',
+        '../../assets/images/fog.jpg',
+        '../../assets/images/rain.jpg',
+        '../../assets/images/sunAndRain.jpg',
+        '../../assets/images/sunAndRain.jpg',
+        '../../assets/images/stormDay.jpg',
+        '../../assets/images/rain.jpg',
+        '../../assets/images/sunAndRain.jpg',
+        '../../assets/images/rain.jpg',
+        '../../assets/images/clouds.jpg',
+        '../../assets/images/sunAndClouds.jpg',
+        '../../assets/images/sunAndClouds.jpg',
+        '../../assets/images/snow.jpg',
+        '../../assets/images/sunAndSnow.jpg',
+        '../../assets/images/snow.jpg',
+        '../../assets/images/rain.jpg',
+        '../../assets/images/stormDay.jpg',
+        '../../assets/images/sunAndClouds.jpg',
+        '../../assets/images/sunAndClouds.jpg',
+        '../../assets/images/rain.jpg',
+        '../../assets/images/hot.jpg',
+        '../../assets/images/snow.jpg',
+        '../../assets/images/clouds.jpg',
+        '../../assets/images/hot.jpg',
+        '../../assets/images/sunAndClouds.jpg',
+        '../../assets/images/clouds.jpg',
+        '../../assets/images/clouds.jpg',
+        '../../assets/images/fog.jpg',
+        '../../assets/images/clouds.jpg',
+        '../../assets/images/rain.jpg',
+        '../../assets/images/rain.jpg',
+        '../../assets/images/stormDay.jpg',
+        '../../assets/images/stormDay.jpg',
+        '../../assets/images/clouds.jpg',
+        '../../assets/images/snow.jpg'
+    ]
+    // let sunArr = [1, 2, 30, 33];
+    // let sunAndCloudsArr = [3, 4, 5, 6, 20, 21, 34];
+    // let cloudsArr = [7, 8, 19, 32, 35, 36, 38, 43];
+    // let fogArr = [11, 37];
+    // let rainArr = [12, 16, 18, 25, 29, 39, 40];
+    // let sunAndRainArr = [13, 14, 17];
+    // let stormArr = [15, 26, 41, 42];
+    // let snowArr = [22, 24, 31, 44];
+    // let sunAndSnowArr = [23]
+    console.log('weatherIcon', weatherIcon.Day.Icon)
+    let selectedImage = (imageArr[12])
+    console.log(selectedImage)
+    // switch (true) {
+    //     case sunArr.includes(weatherIcon):
+    //         selectedImage = (require('../../assets/images/hot.jpg'));
+    //         break;
+    //     case sunAndCloudsArr.includes(weatherIcon):
+    //         selectedImage = (require('../../assets/images/sunAndClouds.jpg'));
+    //         break;
+    //     case cloudsArr.includes(weatherIcon):
+    //         selectedImage = (require('../../assets/images/clouds.jpg'));
+    //         break;
+    //     case fogArr.includes(weatherIcon):
+    //         selectedImage = (require('../../assets/images/fog.jpg'));
+    //         break;
+    //     case rainArr.includes(weatherIcon):
+    //         selectedImage = (require('../../assets/images/rain.jpg'));
+    //         break;
+    //     case sunAndRainArr.includes(weatherIcon):
+    //         selectedImage = (require('../../assets/images/sunAndRain.jpg'));
+    //         break;
+    //     case stormArr.includes(weatherIcon):
+    //         selectedImage = (require('../../assets/images/stormDay.jpg'));
+    //         break;
+    //     case snowArr.includes(weatherIcon):
+    //         selectedImage = (require('../../assets/images/snow.jpg'));
+    //         break;
+    //     case sunAndSnowArr.includes(weatherIcon):
+    //         selectedImage = (require('../../assets/images/sunAndSnow.jpg'));
+    //         break;
+    // }
 
     return selectedImage;
 }
